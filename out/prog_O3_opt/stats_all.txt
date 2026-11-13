@@ -1,0 +1,89 @@
+=== 2.1 time --verbose ===
+sum = 26312806996.84, middle = 499595
+	Command being timed: "./bin/prog_O3_opt"
+	User time (seconds): 0.33
+	System time (seconds): 0.03
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 37068
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9012
+	Voluntary context switches: 0
+	Involuntary context switches: 2
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+=== 2.2 perf stat -d ===
+sum = 26312806996.84, middle = 499595
+
+ Performance counter stats for './bin/prog_O3_opt':
+
+                 0      context-switches                 #      0.0 cs/sec  cs_per_second     
+                 0      cpu-migrations                   #      0.0 migrations/sec  migrations_per_second
+              8998      page-faults                      #  22135.8 faults/sec  page_faults_per_second
+            406.49 msec task-clock                       #      1.0 CPUs  CPUs_utilized       
+          84370827      L1-dcache-load-misses            #      7.4 %  l1d_miss_rate            (41.70%)
+          33262213      branch-misses                    #      6.8 %  branch_miss_rate         (42.68%)
+         491687907      branches                         #   1209.6 M/sec  branch_frequency     (57.43%)
+        1837955180      cpu-cycles                       #      4.5 GHz  cycles_frequency       (58.42%)
+        2068955767      instructions                     #      1.1 instructions  insn_per_cycle  (58.30%)
+         655787640      stalled-cycles-frontend          #     0.35 frontend_cycles_idle        (57.32%)
+
+       0.407402577 seconds time elapsed
+
+       0.377979000 seconds user
+       0.027851000 seconds sys
+
+
+=== 2.3 perf record + perf report ===
+sum = 26312806996.84, middle = 499595
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 1804877763
+#
+# Overhead  Command      Shared Object      Symbol                               
+# ........  ...........  .................  .....................................
+#
+    19.95%  prog_O3_opt  prog_O3_opt        [.] mult_ikj
+            |
+            ---mult_ikj
+               main
+               0x750cbb42a601
+               __libc_start_main
+               _start
+
+    17.69%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad4d
+            |
+            ---0x750cbb44ad4d
+               |          
+               |--9.07%--0x750cbb44ac05
+               |          |          
+               |          |--4.54%--0x750cbb44ac21
+               |          |          |          
+               |          |          |--2.24%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |          |--1.12%--0x750cbb44ac21
+               |          |          |          |          |          
+               |          |          |          |           --0.66%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |           --1.12%--0x750cbb44ac05
+               |          |          |                     |          
+               |          |          |                     |--0.59%--0x750cbb44ac05
+               |          |          |                     |          
+               |          |          |                      --0.53%--0x750cbb44ac21
+               |          |          |          
+               |          |           --2.09%--0x750cbb44ac21

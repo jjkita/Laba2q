@@ -1,0 +1,52 @@
+0000000000001410 <mult_ikj>:
+    1410:	endbr64
+    1414:	push   rbp
+    1415:	lea    rcx,[rip+0x2c64]        # 4080 <C>
+    141c:	mov    rbp,rsp
+    141f:	push   r13
+    1421:	push   r12
+    1423:	push   rbx
+    1424:	and    rsp,0xffffffffffffffc0
+    1428:	lea    r12,[rip+0x802c51]        # 804080 <A>
+    142f:	lea    r13,[rcx+0x400000]
+    1436:	lea    rbx,[rip+0x802c43]        # 804080 <A>
+    143d:	mov    rdi,rcx
+    1440:	mov    edx,0x1000
+    1445:	xor    esi,esi
+    1447:	call   10d0 <memset@plt>
+    144c:	lea    rdx,[rip+0x402c2d]        # 404080 <B>
+    1453:	mov    rdi,r12
+    1456:	mov    rcx,rax
+    1459:	vbroadcastss zmm2,DWORD PTR [rdi]
+    145f:	vbroadcastss zmm1,DWORD PTR [rdi+0x4]
+    1466:	lea    rsi,[rdx+0x1000]
+    146d:	xor    eax,eax
+    146f:	nop    WORD PTR [rax+rax*1+0x0]
+    1475:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    1480:	vmovaps zmm0,ZMMWORD PTR [rdx+rax*1]
+    1487:	vfmadd213ps zmm0,zmm2,ZMMWORD PTR [rcx+rax*1]
+    148e:	vmovaps ZMMWORD PTR [rcx+rax*1],zmm0
+    1495:	vfmadd231ps zmm0,zmm1,ZMMWORD PTR [rsi+rax*1]
+    149c:	vmovaps ZMMWORD PTR [rcx+rax*1],zmm0
+    14a3:	add    rax,0x40
+    14a7:	cmp    rax,0x1000
+    14ad:	jne    1480 <mult_ikj+0x70>
+    14af:	add    rdx,0x2000
+    14b6:	add    rdi,0x8
+    14ba:	cmp    rdx,rbx
+    14bd:	jne    1459 <mult_ikj+0x49>
+    14bf:	add    rcx,0x1000
+    14c6:	add    r12,0x1000
+    14cd:	cmp    rcx,r13
+    14d0:	je     14da <mult_ikj+0xca>
+    14d2:	vzeroupper
+    14d5:	jmp    143d <mult_ikj+0x2d>
+    14da:	vzeroupper
+    14dd:	lea    rsp,[rbp-0x18]
+    14e1:	pop    rbx
+    14e2:	pop    r12
+    14e4:	pop    r13
+    14e6:	pop    rbp
+    14e7:	ret
+    14e8:	nop    DWORD PTR [rax+rax*1+0x0]
+

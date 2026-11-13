@@ -1,0 +1,499 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 1804877763
+#
+# Overhead  Command      Shared Object      Symbol                               
+# ........  ...........  .................  .....................................
+#
+    19.95%  prog_O3_opt  prog_O3_opt        [.] mult_ikj
+            |
+            ---mult_ikj
+               main
+               0x750cbb42a601
+               __libc_start_main
+               _start
+
+    17.69%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad4d
+            |
+            ---0x750cbb44ad4d
+               |          
+               |--9.07%--0x750cbb44ac05
+               |          |          
+               |          |--4.54%--0x750cbb44ac21
+               |          |          |          
+               |          |          |--2.24%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |          |--1.12%--0x750cbb44ac21
+               |          |          |          |          |          
+               |          |          |          |           --0.66%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |           --1.12%--0x750cbb44ac05
+               |          |          |                     |          
+               |          |          |                     |--0.59%--0x750cbb44ac05
+               |          |          |                     |          
+               |          |          |                      --0.53%--0x750cbb44ac21
+               |          |          |          
+               |          |           --2.09%--0x750cbb44ac21
+               |          |                     |          
+               |          |                     |--1.10%--0x750cbb44ac21
+               |          |                     |          |          
+               |          |                     |           --0.72%--0x750cbb44ac05
+               |          |                     |          
+               |          |                      --0.93%--0x750cbb44ac05
+               |          |          
+               |           --4.20%--0x750cbb44ac05
+               |                     |          
+               |                     |--2.37%--0x750cbb44ac05
+               |                     |          |          
+               |                     |          |--1.19%--0x750cbb44ac21
+               |                     |          |          |          
+               |                     |          |           --0.73%--0x750cbb44ac21
+               |                     |          |          
+               |                     |           --0.85%--0x750cbb44ac05
+               |                     |                     |          
+               |                     |                      --0.53%--0x750cbb44ac21
+               |                     |          
+               |                      --1.71%--0x750cbb44ac21
+               |                                |          
+               |                                 --0.98%--0x750cbb44ac21
+               |          
+               |--7.96%--0x750cbb44ac21
+               |          |          
+               |          |--4.02%--0x750cbb44ac05
+               |          |          |          
+               |          |          |--2.11%--0x750cbb44ac21
+               |          |          |          |          
+               |          |          |          |--1.12%--0x750cbb44ac21
+               |          |          |          |          |          
+               |          |          |          |           --0.60%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |           --0.92%--0x750cbb44ac05
+               |          |          |          
+               |          |           --1.58%--0x750cbb44ac05
+               |          |                     |          
+               |          |                     |--0.86%--0x750cbb44ac21
+               |          |                     |          |          
+               |          |                     |           --0.52%--0x750cbb44ac05
+               |          |                     |          
+               |          |                      --0.66%--0x750cbb44ac05
+               |          |          
+               |           --3.54%--0x750cbb44ac21
+               |                     |          
+               |                     |--1.71%--0x750cbb44ac21
+               |                     |          |          
+               |                     |          |--1.06%--0x750cbb44ac05
+               |                     |          |          |          
+               |                     |          |           --0.59%--0x750cbb44ac05
+               |                     |          |          
+               |                     |           --0.59%--0x750cbb44ac21
+               |                     |          
+               |                      --1.70%--0x750cbb44ac05
+               |                                |          
+               |                                |--1.11%--0x750cbb44ac21
+               |                                |          |          
+               |                                |          |--0.53%--0x750cbb44ac05
+               |                                |          |          
+               |                                |           --0.51%--0x750cbb44ac21
+               |                                |          
+               |                                 --0.52%--0x750cbb44ac05
+               |          
+                --0.67%--0x750cbb44b0c1
+                          qsort_r
+                          sort_array
+                          main
+                          0x750cbb42a601
+                          __libc_start_main
+                          _start
+
+    13.92%  prog_O3_opt  prog_O3_opt        [.] compare
+            |
+            ---compare
+               |          
+               |--7.46%--0x750cbb44ac21
+               |          |          
+               |          |--3.58%--0x750cbb44ac21
+               |          |          |          
+               |          |          |--1.69%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |          |--0.91%--0x750cbb44ac21
+               |          |          |          |          |          
+               |          |          |          |           --0.59%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |           --0.71%--0x750cbb44ac05
+               |          |          |          
+               |          |           --1.62%--0x750cbb44ac21
+               |          |                     |          
+               |          |                     |--1.03%--0x750cbb44ac21
+               |          |                     |          |          
+               |          |                     |           --0.65%--0x750cbb44ac21
+               |          |                     |          
+               |          |                      --0.59%--0x750cbb44ac05
+               |          |          
+               |           --3.47%--0x750cbb44ac05
+               |                     |          
+               |                     |--1.70%--0x750cbb44ac05
+               |                     |          |          
+               |                     |          |--0.73%--0x750cbb44ac21
+               |                     |          |          
+               |                     |           --0.72%--0x750cbb44ac05
+               |                     |          
+               |                      --1.64%--0x750cbb44ac21
+               |                                |          
+               |                                |--0.85%--0x750cbb44ac21
+               |                                |          
+               |                                 --0.79%--0x750cbb44ac05
+               |                                           |          
+               |                                            --0.52%--0x750cbb44ac21
+               |          
+                --5.99%--0x750cbb44ac05
+                          |          
+                          |--3.02%--0x750cbb44ac05
+                          |          |          
+                          |          |--1.84%--0x750cbb44ac05
+                          |          |          |          
+                          |          |          |--1.05%--0x750cbb44ac05
+                          |          |          |          |          
+                          |          |          |           --0.59%--0x750cbb44ac21
+                          |          |          |          
+                          |          |           --0.79%--0x750cbb44ac21
+                          |          |                     |          
+                          |          |                      --0.52%--0x750cbb44ac05
+                          |          |          
+                          |           --1.05%--0x750cbb44ac21
+                          |                     |          
+                          |                      --0.60%--0x750cbb44ac05
+                          |          
+                           --2.84%--0x750cbb44ac21
+                                     |          
+                                     |--1.46%--0x750cbb44ac05
+                                     |          |          
+                                     |          |--0.87%--0x750cbb44ac21
+                                     |          |          |          
+                                     |          |           --0.53%--0x750cbb44ac21
+                                     |          |          
+                                     |           --0.59%--0x750cbb44ac05
+                                     |          
+                                      --1.25%--0x750cbb44ac21
+                                                |          
+                                                |--0.58%--0x750cbb44ac05
+                                                |          
+                                                 --0.53%--0x750cbb44ac21
+
+     9.85%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad54
+            |
+            ---0x750cbb44ad54
+               |          
+               |--4.99%--0x750cbb44ac21
+               |          |          
+               |          |--2.36%--0x750cbb44ac05
+               |          |          |          
+               |          |          |--1.18%--0x750cbb44ac21
+               |          |          |          |          
+               |          |          |          |--0.59%--0x750cbb44ac21
+               |          |          |          |          
+               |          |          |           --0.52%--0x750cbb44ac05
+               |          |          |          
+               |          |           --1.12%--0x750cbb44ac05
+               |          |                     |          
+               |          |                     |--0.59%--0x750cbb44ac05
+               |          |                     |          
+               |          |                      --0.52%--0x750cbb44ac21
+               |          |          
+               |           --2.36%--0x750cbb44ac21
+               |                     |          
+               |                     |--1.37%--0x750cbb44ac05
+               |                     |          |          
+               |                     |          |--0.72%--0x750cbb44ac21
+               |                     |          |          
+               |                     |           --0.58%--0x750cbb44ac05
+               |                     |          
+               |                      --0.92%--0x750cbb44ac21
+               |          
+                --4.39%--0x750cbb44ac05
+                          |          
+                          |--2.36%--0x750cbb44ac21
+                          |          |          
+                          |          |--1.24%--0x750cbb44ac21
+                          |          |          |          
+                          |          |           --0.71%--0x750cbb44ac05
+                          |          |          
+                          |           --1.05%--0x750cbb44ac05
+                          |                     |          
+                          |                      --0.59%--0x750cbb44ac21
+                          |          
+                           --1.84%--0x750cbb44ac05
+                                     |          
+                                     |--0.86%--0x750cbb44ac05
+                                     |          
+                                      --0.79%--0x750cbb44ac21
+                                                |          
+                                                 --0.52%--0x750cbb44ac05
+
+     9.51%  prog_O3_opt  libc.so.6          [.] 0x000000000004adbc
+            |
+            ---0x750cbb44adbc
+               |          
+               |--4.71%--0x750cbb44ac05
+               |          |          
+               |          |--2.50%--0x750cbb44ac21
+               |          |          |          
+               |          |          |--1.18%--0x750cbb44ac21
+               |          |          |          |          
+               |          |          |          |--0.66%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |           --0.52%--0x750cbb44ac21
+               |          |          |          
+               |          |           --1.05%--0x750cbb44ac05
+               |          |                     |          
+               |          |                      --0.65%--0x750cbb44ac05
+               |          |          
+               |           --1.95%--0x750cbb44ac05
+               |                     |          
+               |                     |--1.11%--0x750cbb44ac21
+               |                     |          |          
+               |                     |           --0.59%--0x750cbb44ac05
+               |                     |          
+               |                      --0.78%--0x750cbb44ac05
+               |          
+                --4.39%--0x750cbb44ac21
+                          |          
+                          |--2.17%--0x750cbb44ac21
+                          |          |          
+                          |          |--1.31%--0x750cbb44ac21
+                          |          |          |          
+                          |          |           --0.65%--0x750cbb44ac21
+                          |          |          
+                          |           --0.79%--0x750cbb44ac05
+                          |                     |          
+                          |                      --0.53%--0x750cbb44ac05
+                          |          
+                           --1.89%--0x750cbb44ac05
+                                     |          
+                                     |--1.05%--0x750cbb44ac21
+                                     |          |          
+                                     |           --0.59%--0x750cbb44ac21
+                                     |          
+                                      --0.64%--0x750cbb44ac05
+
+     9.03%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad44
+            |
+            ---0x750cbb44ad44
+               |          
+               |--4.55%--0x750cbb44ac05
+               |          |          
+               |          |--2.51%--0x750cbb44ac21
+               |          |          |          
+               |          |          |--1.72%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |          |--0.79%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |           --0.73%--0x750cbb44ac21
+               |          |          |          
+               |          |           --0.66%--0x750cbb44ac21
+               |          |          
+               |           --1.57%--0x750cbb44ac05
+               |                     |          
+               |                     |--0.72%--0x750cbb44ac05
+               |                     |          
+               |                      --0.72%--0x750cbb44ac21
+               |          
+               |--3.88%--0x750cbb44ac21
+               |          |          
+               |          |--2.05%--0x750cbb44ac21
+               |          |          |          
+               |          |          |--1.12%--0x750cbb44ac05
+               |          |          |          |          
+               |          |          |           --0.66%--0x750cbb44ac05
+               |          |          |          
+               |          |           --0.66%--0x750cbb44ac21
+               |          |          
+               |           --1.76%--0x750cbb44ac05
+               |                     |          
+               |                     |--1.04%--0x750cbb44ac05
+               |                     |          |          
+               |                     |          |--0.52%--0x750cbb44ac21
+               |                     |          |          
+               |                     |           --0.52%--0x750cbb44ac05
+               |                     |          
+               |                      --0.65%--0x750cbb44ac21
+               |          
+                --0.60%--0x750cbb44b0c1
+                          qsort_r
+                          sort_array
+                          main
+                          0x750cbb42a601
+                          __libc_start_main
+                          _start
+
+     1.56%  prog_O3_opt  libc.so.6          [.] random
+            |
+            ---random
+               rand
+               |          
+                --1.24%--sort_array
+                          main
+                          0x750cbb42a601
+                          __libc_start_main
+                          _start
+
+     1.45%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad40
+            |
+            ---0x750cbb44ad40
+               |          
+               |--0.59%--0x750cbb44ac05
+               |          
+                --0.53%--0x750cbb44ac21
+
+     1.38%  prog_O3_opt  prog_O3_opt        [.] fill_matrices
+            |
+            ---fill_matrices
+               main
+               0x750cbb42a601
+               __libc_start_main
+               _start
+
+     1.31%  prog_O3_opt  prog_O3_opt        [.] sort_array
+            |
+            ---sort_array
+               main
+               0x750cbb42a601
+               __libc_start_main
+               _start
+
+     1.04%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad5c
+            |
+            ---0x750cbb44ad5c
+               |          
+               |--0.53%--0x750cbb44ac05
+               |          
+                --0.52%--0x750cbb44ac21
+
+     0.98%  prog_O3_opt  libc.so.6          [.] random_r
+            |
+            ---random_r
+               rand
+               |          
+                --0.52%--fill_matrices
+                          main
+                          0x750cbb42a601
+                          __libc_start_main
+                          _start
+
+     0.92%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0ab7
+            |
+            ---0x750cbb5b0ab7
+
+     0.46%  prog_O3_opt  [kernel.kallsyms]  [k] clear_page_erms
+     0.40%  prog_O3_opt  libc.so.6          [.] 0x000000000004adec
+     0.40%  prog_O3_opt  libc.so.6          [.] 0x000000000004ade4
+     0.39%  prog_O3_opt  libc.so.6          [.] 0x000000000004abf7
+     0.33%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a13
+     0.33%  prog_O3_opt  [kernel.kallsyms]  [k] sync_regs
+     0.27%  prog_O3_opt  [kernel.kallsyms]  [k] do_anonymous_page
+     0.27%  prog_O3_opt  libc.so.6          [.] 0x000000000004ac3b
+     0.20%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a9b
+     0.20%  prog_O3_opt  [kernel.kallsyms]  [k] get_mem_cgroup_from_mm
+     0.20%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0c14
+     0.20%  prog_O3_opt  prog_O3_opt        [.] sum_matrix
+     0.20%  prog_O3_opt  libc.so.6          [.] 0x000000000004ae24
+     0.20%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a84
+     0.20%  prog_O3_opt  [kernel.kallsyms]  [k] asm_exc_page_fault
+     0.19%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a63
+     0.13%  prog_O3_opt  libc.so.6          [.] memcpy@plt
+     0.13%  prog_O3_opt  [kernel.kallsyms]  [k] free_pcppages_bulk
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0c36
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0ac2
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004adf1
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004abd3
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004adfe
+     0.13%  prog_O3_opt  [kernel.kallsyms]  [k] __lruvec_stat_mod_folio
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004abef
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004abc4
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004abcf
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a8a
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004adf9
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004acb3
+     0.13%  prog_O3_opt  libc.so.6          [.] rand
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004ac09
+     0.13%  prog_O3_opt  [kernel.kallsyms]  [k] do_user_addr_fault
+     0.13%  prog_O3_opt  [kernel.kallsyms]  [k] __rcu_read_unlock
+     0.13%  prog_O3_opt  [kernel.kallsyms]  [k] error_entry
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x000000000004abe3
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a53
+     0.13%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0cb2
+     0.12%  prog_O3_opt  [kernel.kallsyms]  [k] get_page_from_freelist
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004ade8
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0ab1
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abeb
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0ccd
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0ad3
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0c7c
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abe0
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] folio_remove_rmap_ptes
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad6a
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abdc
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004adc9
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0ba6
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0cd4
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abc7
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] mas_walk
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] charge_memcg
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abcd
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0cb9
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004ac37
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004adf5
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a00
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] alloc_pages_mpol
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004ac24
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abc9
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004ac2f
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] __folio_mod_stat
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abc0
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] memcg1_commit_charge
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004aca7
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abc1
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a58
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a36
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] count_memcg_events
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004ac42
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] folio_batch_move_lru
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] account_user_time
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] folio_add_new_anon_rmap
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad4f
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004abd6
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0acb
+     0.07%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad47
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] irqentry_exit
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] exc_page_fault
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] policy_nodemask
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] __timekeeping_advance.constprop.0
+     0.07%  prog_O3_opt  [kernel.kallsyms]  [k] lock_vma_under_rcu
+     0.06%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a07
+     0.06%  prog_O3_opt  [kernel.kallsyms]  [k] __alloc_frozen_pages_noprof
+     0.06%  prog_O3_opt  libc.so.6          [.] 0x000000000004ad58
+     0.06%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a94
+     0.06%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0a39
+     0.06%  prog_O3_opt  [kernel.kallsyms]  [k] __folio_throttle_swaprate
+     0.06%  prog_O3_opt  libc.so.6          [.] 0x00000000001b131c
+     0.06%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0b07
+     0.06%  prog_O3_opt  [kernel.kallsyms]  [k] __folio_batch_add_and_move
+     0.06%  prog_O3_opt  libc.so.6          [.] 0x00000000001b0c1b
+     0.06%  prog_O3_opt  libc.so.6          [.] 0x000000000004ac33
+     0.06%  prog_O3_opt  [kernel.kallsyms]  [k] __note_gp_changes
+     0.05%  prog_O3_opt  [kernel.kallsyms]  [k] free_unref_folios
+     0.04%  prog_O3_opt  [kernel.kallsyms]  [k] percpu_counter_destroy_many
+     0.01%  prog_O3_opt  [kernel.kallsyms]  [k] __pv_queued_spin_lock_slowpath
+     0.01%  prog_O3_opt  [kernel.kallsyms]  [k] current_time
+     0.00%  prog_O3_opt  [kernel.kallsyms]  [k] commit_creds
+     0.00%  prog_O3_opt  [kernel.kallsyms]  [k] __amd_pmu_enable_all
+     0.00%  perf-exec    [kernel.kallsyms]  [k] __amd_pmu_enable_all
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

@@ -1,0 +1,211 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 19K of event 'cpu/cycles/P'
+# Event count (approx.): 23099388273
+#
+# Overhead  Command  Shared Object      Symbol                                        
+# ........  .......  .................  ..............................................
+#
+    91.52%  prog_O0  prog_O0            [.] mult_ijk
+            |
+            ---mult_ijk
+               main
+               0x7e339662a601
+               __libc_start_main
+               _start
+
+     3.74%  prog_O0  prog_O0            [.] compare
+            |
+            ---compare
+               |          
+                --3.05%--0x7e339664ad4d
+                          |          
+                          |--1.52%--0x7e339664ac05
+                          |          |          
+                          |          |--0.78%--0x7e339664ac05
+                          |          |          
+                          |           --0.69%--0x7e339664ac21
+                          |          
+                           --1.37%--0x7e339664ac21
+                                     |          
+                                     |--0.66%--0x7e339664ac05
+                                     |          
+                                      --0.64%--0x7e339664ac21
+
+     1.01%  prog_O0  libc.so.6          [.] 0x000000000004adbc
+            |
+            ---0x7e339664adbc
+               |          
+                --0.52%--0x7e339664ac21
+
+     0.96%  prog_O0  libc.so.6          [.] 0x000000000004ad54
+            |
+            ---0x7e339664ad54
+
+     0.66%  prog_O0  libc.so.6          [.] 0x000000000004ad44
+            |
+            ---0x7e339664ad44
+
+     0.17%  prog_O0  libc.so.6          [.] 0x000000000004ad4f
+     0.16%  prog_O0  prog_O0            [.] fill_matrices
+     0.14%  prog_O0  prog_O0            [.] sort_array
+     0.10%  prog_O0  libc.so.6          [.] 0x000000000004ad47
+     0.09%  prog_O0  libc.so.6          [.] 0x000000000004ad5c
+     0.07%  prog_O0  libc.so.6          [.] random
+     0.07%  prog_O0  libc.so.6          [.] 0x00000000001b0ab7
+     0.06%  prog_O0  libc.so.6          [.] random_r
+     0.05%  prog_O0  prog_O0            [.] sum_matrix
+     0.04%  prog_O0  [kernel.kallsyms]  [k] get_page_from_freelist
+     0.03%  prog_O0  libc.so.6          [.] 0x000000000004adec
+     0.03%  prog_O0  [kernel.kallsyms]  [k] sync_regs
+     0.03%  prog_O0  [kernel.kallsyms]  [k] clear_page_erms
+     0.03%  prog_O0  libc.so.6          [.] 0x000000000004abf7
+     0.03%  prog_O0  [kernel.kallsyms]  [k] sched_balance_trigger
+     0.02%  prog_O0  [kernel.kallsyms]  [k] error_entry
+     0.02%  prog_O0  [kernel.kallsyms]  [k] __alloc_frozen_pages_noprof
+     0.02%  prog_O0  libc.so.6          [.] 0x000000000004abe3
+     0.02%  prog_O0  libc.so.6          [.] 0x000000000004ade4
+     0.02%  prog_O0  prog_O0            [.] rand@plt
+     0.02%  prog_O0  [kernel.kallsyms]  [k] update_curr
+     0.02%  prog_O0  [kernel.kallsyms]  [k] __update_load_avg_se
+     0.02%  prog_O0  libc.so.6          [.] 0x00000000001b0a13
+     0.02%  prog_O0  libc.so.6          [.] 0x000000000004ad32
+     0.02%  prog_O0  [kernel.kallsyms]  [k] exc_page_fault
+     0.02%  prog_O0  libc.so.6          [.] 0x00000000001b0c1b
+     0.02%  prog_O0  libc.so.6          [.] 0x00000000001b0a84
+     0.01%  prog_O0  [kernel.kallsyms]  [k] mod_memcg_lruvec_state
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __rcu_read_unlock
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __sysvec_hyperv_stimer0
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __timekeeping_advance.constprop.0
+     0.01%  prog_O0  [kernel.kallsyms]  [k] do_user_addr_fault
+     0.01%  prog_O0  [kernel.kallsyms]  [k] count_memcg_events
+     0.01%  prog_O0  [kernel.kallsyms]  [k] hv_set_msr
+     0.01%  prog_O0  [kernel.kallsyms]  [k] hrtimer_interrupt
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ad6a
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ade8
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ac42
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0aa3
+     0.01%  prog_O0  [kernel.kallsyms]  [k] folio_mapping
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __rmqueue_pcplist
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abdc
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ae24
+     0.01%  prog_O0  [kernel.kallsyms]  [k] alloc_pages_mpol
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abc0
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a9b
+     0.01%  prog_O0  [kernel.kallsyms]  [k] account_user_time
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ac2f
+     0.01%  prog_O0  [kernel.kallsyms]  [k] blk_cgroup_congested
+     0.01%  prog_O0  [kernel.kallsyms]  [k] lru_add
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0c28
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a07
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a94
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abcf
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004adf1
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abef
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __pi__text
+     0.01%  prog_O0  [kernel.kallsyms]  [k] get_mem_cgroup_from_mm
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ac3b
+     0.01%  prog_O0  [kernel.kallsyms]  [k] mem_cgroup_update_lru_size
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __lruvec_stat_mod_folio
+     0.01%  prog_O0  [kernel.kallsyms]  [k] asm_exc_page_fault
+     0.01%  prog_O0  [kernel.kallsyms]  [k] asm_sysvec_hyperv_stimer0
+     0.01%  prog_O0  [kernel.kallsyms]  [k] update_se
+     0.01%  prog_O0  [kernel.kallsyms]  [k] hv_stimer0_isr
+     0.01%  prog_O0  [kernel.kallsyms]  [k] sched_balance_find_src_group
+     0.01%  prog_O0  [kernel.kallsyms]  [k] vma_alloc_folio_noprof
+     0.01%  prog_O0  [kernel.kallsyms]  [k] _raw_spin_lock
+     0.01%  prog_O0  [kernel.kallsyms]  [k] rb_next
+     0.01%  prog_O0  [kernel.kallsyms]  [k] update_curr_dl_se
+     0.01%  prog_O0  [kernel.kallsyms]  [k] irq_work_tick
+     0.01%  prog_O0  [kernel.kallsyms]  [k] native_sched_clock
+     0.01%  prog_O0  [kernel.kallsyms]  [k] avg_vruntime
+     0.01%  prog_O0  [kernel.kallsyms]  [k] update_fast_timekeeper
+     0.01%  prog_O0  [kernel.kallsyms]  [k] lock_vma_under_rcu
+     0.01%  prog_O0  [kernel.kallsyms]  [k] ___pte_offset_map
+     0.01%  prog_O0  [kernel.kallsyms]  [k] generic_smp_call_function_single_interrupt
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a63
+     0.01%  prog_O0  [kernel.kallsyms]  [k] update_process_times
+     0.01%  prog_O0  [kernel.kallsyms]  [k] mas_walk
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __queue_work
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abc9
+     0.01%  prog_O0  [kernel.kallsyms]  [k] hv_send_ipi
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a00
+     0.01%  prog_O0  [kernel.kallsyms]  [k] task_tick_mm_cid
+     0.01%  prog_O0  [kernel.kallsyms]  [k] _raw_spin_lock_irqsave
+     0.01%  prog_O0  [kernel.kallsyms]  [k] _find_first_bit
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0c2f
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004aca4
+     0.01%  prog_O0  [kernel.kallsyms]  [k] reweight_entity
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0af0
+     0.01%  prog_O0  [kernel.kallsyms]  [k] dl_server_update
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0c06
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ac09
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abcd
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ac33
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abd3
+     0.01%  prog_O0  [kernel.kallsyms]  [k] timekeeping_update_from_shadow.constprop.0
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004adfe
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ac16
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ac21
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004adfd
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abcb
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004add1
+     0.01%  prog_O0  [kernel.kallsyms]  [k] update_vsyscall
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0b1d
+     0.01%  prog_O0  [kernel.kallsyms]  [k] tick_do_update_jiffies64
+     0.01%  prog_O0  [kernel.kallsyms]  [k] handle_mm_fault
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a28
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0bce
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a39
+     0.01%  prog_O0  [kernel.kallsyms]  [k] x86_pmu_disable_all
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0c0d
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __mem_cgroup_charge
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a8a
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004adc3
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a8e
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004acc2
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004adf9
+     0.01%  prog_O0  libc.so.6          [.] 0x00000000001b0a36
+     0.01%  prog_O0  [kernel.kallsyms]  [k] ntp_tick_length
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004aca7
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004abe7
+     0.01%  prog_O0  [kernel.kallsyms]  [k] sched_clock_cpu
+     0.01%  prog_O0  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004acb7
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ad40
+     0.01%  prog_O0  [kernel.kallsyms]  [k] ksm_vma_flags
+     0.01%  prog_O0  [kernel.kallsyms]  [k] __raw_callee_save___pv_queued_spin_unlock
+     0.01%  prog_O0  [kernel.kallsyms]  [k] rcu_sched_clock_irq
+     0.01%  prog_O0  [kernel.kallsyms]  [k] sched_tick
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ac28
+     0.01%  prog_O0  libc.so.6          [.] 0x000000000004ae04
+     0.01%  prog_O0  [kernel.kallsyms]  [k] update_rq_clock
+     0.00%  prog_O0  [kernel.kallsyms]  [k] __hrtimer_run_queues
+     0.00%  prog_O0  [kernel.kallsyms]  [k] get_vma_policy
+     0.00%  prog_O0  [kernel.kallsyms]  [k] propagate_entity_load_avg
+     0.00%  prog_O0  [kernel.kallsyms]  [k] calc_global_load
+     0.00%  prog_O0  [kernel.kallsyms]  [k] error_return
+     0.00%  prog_O0  [kernel.kallsyms]  [k] _raw_spin_unlock
+     0.00%  prog_O0  [kernel.kallsyms]  [k] charge_memcg
+     0.00%  prog_O0  [kernel.kallsyms]  [k] memcg1_commit_charge
+     0.00%  prog_O0  [kernel.kallsyms]  [k] __folio_batch_add_and_move
+     0.00%  prog_O0  [kernel.kallsyms]  [k] irqentry_exit_to_user_mode
+     0.00%  prog_O0  [kernel.kallsyms]  [k] unmap_page_range
+     0.00%  prog_O0  libc.so.6          [.] 0x00000000001b0cd4
+     0.00%  prog_O0  [kernel.kallsyms]  [k] do_anonymous_page
+     0.00%  prog_O0  libc.so.6          [.] 0x00000000001b0cb2
+     0.00%  prog_O0  libc.so.6          [.] 0x00000000001b0ccd
+     0.00%  prog_O0  libc.so.6          [.] 0x00000000001b0cab
+     0.00%  prog_O0  [kernel.kallsyms]  [k] do_arch_prctl_64
+     0.00%  prog_O0  [kernel.kallsyms]  [k] flush_signal_handlers
+     0.00%  prog_O0  [kernel.kallsyms]  [k] __amd_pmu_enable_all
+     0.00%  perf-ex  [kernel.kallsyms]  [k] __amd_pmu_enable_all
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

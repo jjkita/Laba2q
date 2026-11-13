@@ -1,0 +1,78 @@
+00000000000013e5 <mult_ikj>:
+    13e5:	endbr64
+    13e9:	push   rbp
+    13ea:	mov    rbp,rsp
+    13ed:	mov    DWORD PTR [rbp-0x10],0x0
+    13f4:	jmp    151a <mult_ikj+0x135>
+    13f9:	mov    DWORD PTR [rbp-0xc],0x0
+    1400:	jmp    1430 <mult_ikj+0x4b>
+    1402:	mov    eax,DWORD PTR [rbp-0xc]
+    1405:	cdqe
+    1407:	mov    edx,DWORD PTR [rbp-0x10]
+    140a:	movsxd rdx,edx
+    140d:	shl    rdx,0xa
+    1411:	add    rax,rdx
+    1414:	lea    rdx,[rax*4+0x0]
+    141c:	lea    rax,[rip+0x802c1d]        # 804040 <C>
+    1423:	pxor   xmm0,xmm0
+    1427:	movss  DWORD PTR [rdx+rax*1],xmm0
+    142c:	add    DWORD PTR [rbp-0xc],0x1
+    1430:	cmp    DWORD PTR [rbp-0xc],0x3ff
+    1437:	jle    1402 <mult_ikj+0x1d>
+    1439:	mov    DWORD PTR [rbp-0x8],0x0
+    1440:	jmp    1509 <mult_ikj+0x124>
+    1445:	mov    eax,DWORD PTR [rbp-0x8]
+    1448:	cdqe
+    144a:	mov    edx,DWORD PTR [rbp-0x10]
+    144d:	movsxd rdx,edx
+    1450:	shl    rdx,0xa
+    1454:	add    rax,rdx
+    1457:	lea    rdx,[rax*4+0x0]
+    145f:	lea    rax,[rip+0x2bda]        # 4040 <A>
+    1466:	movss  xmm0,DWORD PTR [rdx+rax*1]
+    146b:	movss  DWORD PTR [rbp-0x4],xmm0
+    1470:	mov    DWORD PTR [rbp-0xc],0x0
+    1477:	jmp    14f8 <mult_ikj+0x113>
+    1479:	mov    eax,DWORD PTR [rbp-0xc]
+    147c:	cdqe
+    147e:	mov    edx,DWORD PTR [rbp-0x10]
+    1481:	movsxd rdx,edx
+    1484:	shl    rdx,0xa
+    1488:	add    rax,rdx
+    148b:	lea    rdx,[rax*4+0x0]
+    1493:	lea    rax,[rip+0x802ba6]        # 804040 <C>
+    149a:	movss  xmm1,DWORD PTR [rdx+rax*1]
+    149f:	mov    eax,DWORD PTR [rbp-0xc]
+    14a2:	cdqe
+    14a4:	mov    edx,DWORD PTR [rbp-0x8]
+    14a7:	movsxd rdx,edx
+    14aa:	shl    rdx,0xa
+    14ae:	add    rax,rdx
+    14b1:	lea    rdx,[rax*4+0x0]
+    14b9:	lea    rax,[rip+0x402b80]        # 404040 <B>
+    14c0:	movss  xmm0,DWORD PTR [rdx+rax*1]
+    14c5:	mulss  xmm0,DWORD PTR [rbp-0x4]
+    14ca:	addss  xmm0,xmm1
+    14ce:	mov    eax,DWORD PTR [rbp-0xc]
+    14d1:	cdqe
+    14d3:	mov    edx,DWORD PTR [rbp-0x10]
+    14d6:	movsxd rdx,edx
+    14d9:	shl    rdx,0xa
+    14dd:	add    rax,rdx
+    14e0:	lea    rdx,[rax*4+0x0]
+    14e8:	lea    rax,[rip+0x802b51]        # 804040 <C>
+    14ef:	movss  DWORD PTR [rdx+rax*1],xmm0
+    14f4:	add    DWORD PTR [rbp-0xc],0x1
+    14f8:	cmp    DWORD PTR [rbp-0xc],0x3ff
+    14ff:	jle    1479 <mult_ikj+0x94>
+    1505:	add    DWORD PTR [rbp-0x8],0x1
+    1509:	cmp    DWORD PTR [rbp-0x8],0x3ff
+    1510:	jle    1445 <mult_ikj+0x60>
+    1516:	add    DWORD PTR [rbp-0x10],0x1
+    151a:	cmp    DWORD PTR [rbp-0x10],0x3ff
+    1521:	jle    13f9 <mult_ikj+0x14>
+    1527:	nop
+    1528:	nop
+    1529:	pop    rbp
+    152a:	ret
+

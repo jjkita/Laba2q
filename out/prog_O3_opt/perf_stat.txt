@@ -1,0 +1,20 @@
+
+ Performance counter stats for './bin/prog_O3_opt':
+
+                 0      context-switches                 #      0.0 cs/sec  cs_per_second     
+                 0      cpu-migrations                   #      0.0 migrations/sec  migrations_per_second
+              8998      page-faults                      #  22135.8 faults/sec  page_faults_per_second
+            406.49 msec task-clock                       #      1.0 CPUs  CPUs_utilized       
+          84370827      L1-dcache-load-misses            #      7.4 %  l1d_miss_rate            (41.70%)
+          33262213      branch-misses                    #      6.8 %  branch_miss_rate         (42.68%)
+         491687907      branches                         #   1209.6 M/sec  branch_frequency     (57.43%)
+        1837955180      cpu-cycles                       #      4.5 GHz  cycles_frequency       (58.42%)
+        2068955767      instructions                     #      1.1 instructions  insn_per_cycle  (58.30%)
+         655787640      stalled-cycles-frontend          #     0.35 frontend_cycles_idle        (57.32%)
+
+       0.407402577 seconds time elapsed
+
+       0.377979000 seconds user
+       0.027851000 seconds sys
+
+

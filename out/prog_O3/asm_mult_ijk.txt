@@ -1,0 +1,45 @@
+0000000000001360 <mult_ijk>:
+    1360:	endbr64
+    1364:	push   rbp
+    1365:	lea    r9,[rip+0x403d14]        # 405080 <B+0x1000>
+    136c:	lea    r11,[rip+0x2d0d]        # 4080 <C>
+    1373:	xor    r10d,r10d
+    1376:	mov    rbp,rsp
+    1379:	push   r12
+    137b:	lea    r12,[rip+0x802cfe]        # 804080 <A>
+    1382:	push   rbx
+    1383:	lea    rbx,[r9+0x3ff000]
+    138a:	mov    r8,r10
+    138d:	mov    rcx,rbx
+    1390:	mov    rdi,r11
+    1393:	lea    rsi,[rip+0x402ce6]        # 404080 <B>
+    139a:	shl    r8,0xc
+    139e:	add    r8,r12
+    13a1:	mov    rax,rsi
+    13a4:	mov    rdx,r8
+    13a7:	vxorps xmm0,xmm0,xmm0
+    13ab:	cs nop WORD PTR [rax+rax*1+0x0]
+    13b5:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    13c0:	vbroadcastss zmm1,DWORD PTR [rdx]
+    13c6:	add    rax,0x1000
+    13cc:	vfmadd231ps zmm0,zmm1,ZMMWORD PTR [rax-0x1000]
+    13d3:	add    rdx,0x4
+    13d7:	cmp    rax,rcx
+    13da:	jne    13c0 <mult_ijk+0x60>
+    13dc:	add    rsi,0x40
+    13e0:	vmovaps ZMMWORD PTR [rdi],zmm0
+    13e6:	lea    rcx,[rax+0x40]
+    13ea:	add    rdi,0x40
+    13ee:	cmp    rsi,r9
+    13f1:	jne    13a1 <mult_ijk+0x41>
+    13f3:	inc    r10
+    13f6:	add    r11,0x1000
+    13fd:	cmp    r10,0x400
+    1404:	jne    138a <mult_ijk+0x2a>
+    1406:	vzeroupper
+    1409:	pop    rbx
+    140a:	pop    r12
+    140c:	pop    rbp
+    140d:	ret
+    140e:	xchg   ax,ax
+

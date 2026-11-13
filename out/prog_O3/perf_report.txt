@@ -1,0 +1,368 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cpu/cycles/P'
+# Event count (approx.): 3125265949
+#
+# Overhead  Command  Shared Object      Symbol                                       
+# ........  .......  .................  .............................................
+#
+    52.18%  prog_O3  prog_O3            [.] mult_ijk
+            |
+            ---mult_ijk
+               main
+               0x70477202a601
+               __libc_start_main
+               _start
+
+     8.97%  prog_O3  prog_O3            [.] compare
+            |
+            ---compare
+               |          
+               |--4.48%--0x70477204ac21
+               |          |          
+               |          |--2.28%--0x70477204ac21
+               |          |          |          
+               |          |          |--1.10%--0x70477204ac21
+               |          |          |          |          
+               |          |          |           --0.78%--0x70477204ac21
+               |          |          |          
+               |          |           --1.03%--0x70477204ac05
+               |          |                     |          
+               |          |                      --0.58%--0x70477204ac05
+               |          |          
+               |           --2.01%--0x70477204ac05
+               |                     |          
+               |                     |--1.04%--0x70477204ac05
+               |                     |          |          
+               |                     |           --0.70%--0x70477204ac05
+               |                     |                     |          
+               |                     |                      --0.52%--0x70477204ac05
+               |                     |          
+               |                      --0.78%--0x70477204ac21
+               |          
+                --4.17%--0x70477204ac05
+                          |          
+                          |--1.99%--0x70477204ac05
+                          |          |          
+                          |          |--1.00%--0x70477204ac05
+                          |          |          |          
+                          |          |           --0.56%--0x70477204ac21
+                          |          |          
+                          |           --0.96%--0x70477204ac21
+                          |          
+                           --1.92%--0x70477204ac21
+                                     |          
+                                     |--1.14%--0x70477204ac21
+                                     |          |          
+                                     |          |--0.59%--0x70477204ac21
+                                     |          |          
+                                     |           --0.51%--0x70477204ac05
+                                     |          
+                                      --0.74%--0x70477204ac05
+
+     7.75%  prog_O3  libc.so.6          [.] 0x000000000004ad4d
+            |
+            ---0x70477204ad4d
+               |          
+               |--3.88%--0x70477204ac05
+               |          |          
+               |          |--2.12%--0x70477204ac05
+               |          |          |          
+               |          |          |--1.03%--0x70477204ac21
+               |          |          |          |          
+               |          |          |           --0.62%--0x70477204ac05
+               |          |          |          
+               |          |           --0.92%--0x70477204ac05
+               |          |                     |          
+               |          |                      --0.52%--0x70477204ac05
+               |          |          
+               |           --1.53%--0x70477204ac21
+               |                     |          
+               |                     |--0.92%--0x70477204ac21
+               |                     |          
+               |                      --0.54%--0x70477204ac05
+               |          
+                --3.47%--0x70477204ac21
+                          |          
+                          |--1.76%--0x70477204ac05
+                          |          |          
+                          |          |--0.93%--0x70477204ac21
+                          |          |          |          
+                          |          |           --0.59%--0x70477204ac05
+                          |          |          
+                          |           --0.73%--0x70477204ac05
+                          |          
+                           --1.51%--0x70477204ac21
+                                     |          
+                                      --1.03%--0x70477204ac05
+                                                |          
+                                                 --0.51%--0x70477204ac05
+
+     6.18%  prog_O3  libc.so.6          [.] 0x000000000004adbc
+            |
+            ---0x70477204adbc
+               |          
+               |--2.93%--0x70477204ac05
+               |          |          
+               |          |--1.56%--0x70477204ac21
+               |          |          |          
+               |          |          |--0.81%--0x70477204ac21
+               |          |          |          
+               |          |           --0.70%--0x70477204ac05
+               |          |          
+               |           --1.26%--0x70477204ac05
+               |                     |          
+               |                      --0.85%--0x70477204ac05
+               |          
+                --2.90%--0x70477204ac21
+                          |          
+                          |--1.40%--0x70477204ac21
+                          |          |          
+                          |          |--0.74%--0x70477204ac21
+                          |          |          
+                          |           --0.58%--0x70477204ac05
+                          |          
+                           --1.39%--0x70477204ac05
+                                     |          
+                                     |--0.78%--0x70477204ac21
+                                     |          
+                                      --0.54%--0x70477204ac05
+
+     5.58%  prog_O3  libc.so.6          [.] 0x000000000004ad54
+            |
+            ---0x70477204ad54
+               |          
+               |--2.72%--0x70477204ac21
+               |          |          
+               |          |--1.54%--0x70477204ac05
+               |          |          |          
+               |          |          |--0.77%--0x70477204ac05
+               |          |          |          
+               |          |           --0.70%--0x70477204ac21
+               |          |                     |          
+               |          |                      --0.51%--0x70477204ac05
+               |          |          
+               |           --1.07%--0x70477204ac21
+               |                     |          
+               |                      --0.51%--0x70477204ac05
+               |          
+                --2.60%--0x70477204ac05
+                          |          
+                          |--1.37%--0x70477204ac05
+                          |          |          
+                          |           --0.82%--0x70477204ac21
+                          |                     |          
+                          |                      --0.52%--0x70477204ac21
+                          |          
+                           --1.05%--0x70477204ac21
+                                     |          
+                                      --0.53%--0x70477204ac21
+
+     5.18%  prog_O3  libc.so.6          [.] 0x000000000004ad44
+            |
+            ---0x70477204ad44
+               |          
+               |--2.53%--0x70477204ac21
+               |          |          
+               |          |--1.30%--0x70477204ac21
+               |          |          |          
+               |          |          |--0.63%--0x70477204ac05
+               |          |          |          
+               |          |           --0.59%--0x70477204ac21
+               |          |          
+               |           --0.93%--0x70477204ac05
+               |                     |          
+               |                      --0.52%--0x70477204ac21
+               |          
+                --2.40%--0x70477204ac05
+                          |          
+                          |--1.17%--0x70477204ac05
+                          |          |          
+                          |          |--0.59%--0x70477204ac21
+                          |          |          
+                          |           --0.58%--0x70477204ac05
+                          |          
+                           --1.07%--0x70477204ac21
+
+     0.92%  prog_O3  libc.so.6          [.] 0x00000000001b0ab7
+            |
+            ---0x7047721b0ab7
+               |          
+                --0.62%--0x70477204ac05
+
+     0.87%  prog_O3  prog_O3            [.] sort_array
+            |
+            ---sort_array
+               main
+               0x70477202a601
+               __libc_start_main
+               _start
+
+     0.80%  prog_O3  libc.so.6          [.] random_r
+            |
+            ---random_r
+               rand
+               |          
+                --0.59%--sort_array
+                          main
+                          0x70477202a601
+                          __libc_start_main
+                          _start
+
+     0.79%  prog_O3  prog_O3            [.] fill_matrices
+            |
+            ---fill_matrices
+               main
+               0x70477202a601
+               __libc_start_main
+               _start
+
+     0.75%  prog_O3  libc.so.6          [.] 0x000000000004ad40
+            |
+            ---0x70477204ad40
+
+     0.70%  prog_O3  libc.so.6          [.] 0x000000000004ad5c
+            |
+            ---0x70477204ad5c
+
+     0.54%  prog_O3  libc.so.6          [.] random
+            |
+            ---random
+               rand
+
+     0.37%  prog_O3  [kernel.kallsyms]  [k] sync_regs
+     0.30%  prog_O3  libc.so.6          [.] 0x000000000004adec
+     0.28%  prog_O3  libc.so.6          [.] rand
+     0.27%  prog_O3  [kernel.kallsyms]  [k] clear_page_erms
+     0.26%  prog_O3  libc.so.6          [.] 0x000000000004ade4
+     0.18%  prog_O3  libc.so.6          [.] 0x00000000001b0a13
+     0.18%  prog_O3  libc.so.6          [.] 0x00000000001b0a84
+     0.15%  prog_O3  libc.so.6          [.] 0x000000000004adc9
+     0.15%  prog_O3  libc.so.6          [.] 0x00000000001b0a28
+     0.15%  prog_O3  libc.so.6          [.] 0x000000000004ac24
+     0.14%  prog_O3  [kernel.kallsyms]  [k] error_entry
+     0.14%  prog_O3  [kernel.kallsyms]  [k] get_mem_cgroup_from_mm
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004abdc
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004abc4
+     0.11%  prog_O3  libc.so.6          [.] 0x00000000001b0a39
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004acb3
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004adf9
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004ad4f
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004ae04
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004abcb
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004abcf
+     0.11%  prog_O3  [kernel.kallsyms]  [k] __raw_callee_save___pv_queued_spin_unlock
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004abd3
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004adf1
+     0.11%  prog_O3  libc.so.6          [.] 0x000000000004ae24
+     0.11%  prog_O3  prog_O3            [.] sum_matrix
+     0.11%  prog_O3  libc.so.6          [.] 0x00000000001b0c2f
+     0.11%  prog_O3  [kernel.kallsyms]  [k] do_anonymous_page
+     0.10%  prog_O3  libc.so.6          [.] 0x00000000001b0ccd
+     0.10%  prog_O3  [kernel.kallsyms]  [k] __alloc_frozen_pages_noprof
+     0.08%  prog_O3  libc.so.6          [.] 0x000000000004abc0
+     0.08%  prog_O3  libc.so.6          [.] 0x000000000004ac09
+     0.08%  prog_O3  libc.so.6          [.] 0x00000000001b0c36
+     0.08%  prog_O3  libc.so.6          [.] 0x000000000004ac13
+     0.08%  prog_O3  libc.so.6          [.] 0x000000000004abd6
+     0.07%  prog_O3  libc.so.6          [.] 0x00000000001b0a04
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004abcd
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004ac42
+     0.07%  prog_O3  [kernel.kallsyms]  [k] asm_exc_page_fault
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004abe3
+     0.07%  prog_O3  libc.so.6          [.] 0x00000000001b0a07
+     0.07%  prog_O3  libc.so.6          [.] 0x00000000001b0b07
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004abf7
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004abc9
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004ad23
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004ae07
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004aca4
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004ad6a
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004abe0
+     0.07%  prog_O3  [kernel.kallsyms]  [k] __rmqueue_pcplist
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004ae33
+     0.07%  prog_O3  libc.so.6          [.] 0x000000000004ad58
+     0.07%  prog_O3  libc.so.6          [.] 0x00000000001b0cdb
+     0.07%  prog_O3  [kernel.kallsyms]  [k] __css_rstat_updated
+     0.06%  prog_O3  [kernel.kallsyms]  [k] alloc_pages_mpol
+     0.06%  prog_O3  [kernel.kallsyms]  [k] __rcu_read_unlock
+     0.04%  prog_O3  [kernel.kallsyms]  [k] obj_cgroup_charge_pages
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __next_zones_zonelist
+     0.04%  prog_O3  [kernel.kallsyms]  [k] update_load_avg
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004ac16
+     0.04%  prog_O3  [kernel.kallsyms]  [k] timerqueue_add
+     0.04%  prog_O3  [kernel.kallsyms]  [k] update_vsyscall
+     0.04%  prog_O3  [kernel.kallsyms]  [k] do_user_addr_fault
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0a00
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __update_load_avg_cfs_rq
+     0.04%  prog_O3  [kernel.kallsyms]  [k] sched_tick
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0a3e
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004ad32
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004ac37
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0b68
+     0.04%  prog_O3  [kernel.kallsyms]  [k] calc_global_load
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004abf3
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0a94
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0c3d
+     0.04%  prog_O3  [kernel.kallsyms]  [k] _raw_spin_lock_irqsave
+     0.04%  prog_O3  [kernel.kallsyms]  [k] get_page_from_freelist
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004ae2e
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0c14
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __update_load_avg_se
+     0.04%  prog_O3  [kernel.kallsyms]  [k] folio_add_lru_vma
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0ac2
+     0.04%  prog_O3  [kernel.kallsyms]  [k] kthread_blkcg
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004ac28
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004ae06
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0c06
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0aa3
+     0.04%  prog_O3  [kernel.kallsyms]  [k] update_fast_timekeeper
+     0.04%  prog_O3  [kernel.kallsyms]  [k] handle_mm_fault
+     0.04%  prog_O3  [kernel.kallsyms]  [k] account_user_time
+     0.04%  prog_O3  [kernel.kallsyms]  [k] folio_batch_move_lru
+     0.04%  prog_O3  [kernel.kallsyms]  [k] _raw_spin_lock
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004ad47
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0aba
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0a8e
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0cd4
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0a5d
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0a8a
+     0.04%  prog_O3  [kernel.kallsyms]  [k] tick_nohz_handler
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __folio_batch_add_and_move
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.04%  prog_O3  libc.so.6          [.] 0x00000000001b0c0d
+     0.04%  prog_O3  [kernel.kallsyms]  [k] dl_server_update
+     0.04%  prog_O3  libc.so.6          [.] 0x000000000004acaf
+     0.04%  prog_O3  [kernel.kallsyms]  [k] count_memcg_events
+     0.04%  prog_O3  [kernel.kallsyms]  [k] mem_cgroup_update_lru_size
+     0.03%  prog_O3  libc.so.6          [.] 0x000000000004ae00
+     0.03%  prog_O3  [kernel.kallsyms]  [k] unmap_page_range
+     0.03%  prog_O3  libc.so.6          [.] 0x00000000001b0a53
+     0.03%  prog_O3  [kernel.kallsyms]  [k] free_pages_and_swap_cache
+     0.03%  prog_O3  [kernel.kallsyms]  [k] free_unref_folios
+     0.03%  prog_O3  [kernel.kallsyms]  [k] lock_vma_under_rcu
+     0.03%  prog_O3  [kernel.kallsyms]  [k] folio_remove_rmap_ptes
+     0.03%  prog_O3  [kernel.kallsyms]  [k] irqentry_exit_to_user_mode
+     0.03%  prog_O3  [kernel.kallsyms]  [k] vma_alloc_folio_noprof
+     0.03%  prog_O3  libc.so.6          [.] 0x00000000001b0cab
+     0.03%  prog_O3  libc.so.6          [.] 0x00000000001b0cb9
+     0.03%  prog_O3  [kernel.kallsyms]  [k] blk_cgroup_congested
+     0.03%  prog_O3  [kernel.kallsyms]  [k] __mem_cgroup_charge
+     0.03%  prog_O3  [kernel.kallsyms]  [k] __mod_zone_page_state
+     0.03%  prog_O3  [kernel.kallsyms]  [k] folio_mapping
+     0.03%  prog_O3  [kernel.kallsyms]  [k] __lruvec_stat_mod_folio
+     0.03%  prog_O3  [kernel.kallsyms]  [k] lru_add
+     0.03%  prog_O3  [kernel.kallsyms]  [k] native_flush_tlb_one_user
+     0.01%  prog_O3  [kernel.kallsyms]  [k] kmem_cache_free
+     0.00%  prog_O3  [kernel.kallsyms]  [k] kmem_cache_alloc_noprof
+     0.00%  prog_O3  [kernel.kallsyms]  [k] vmalloc_to_page
+     0.00%  perf-ex  [kernel.kallsyms]  [k] __amd_pmu_enable_all
+     0.00%  prog_O3  [kernel.kallsyms]  [k] __amd_pmu_enable_all
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
